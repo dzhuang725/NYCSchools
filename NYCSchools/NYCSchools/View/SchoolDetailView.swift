@@ -9,9 +9,7 @@ import SwiftUI
 
 struct SchoolDetailView: View {
     let schoolDetailViewModel: SchoolDetailViewModel
-//    let school: School
-//    @State private var satScore: SATScore?
-
+    
     var body: some View {
         List {
             Section(header: Text("School Name")) {
@@ -30,14 +28,6 @@ struct SchoolDetailView: View {
         }
         .listStyle(GroupedListStyle())
         .navigationTitle("School Details")
-        .task {
-            do {
-                try await schoolDetailViewModel.getSATScore()
-//                satScore = try await SchoolService.shared.fetchSATScores(for: school.dbn)
-            } catch {
-                print("Error fetching SAT scores: \(error)")
-            }
-        }
     }
 }
 
