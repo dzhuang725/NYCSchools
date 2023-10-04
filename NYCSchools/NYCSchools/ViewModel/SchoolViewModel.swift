@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 final class SchoolViewModel: ObservableObject {
     @Published var schools: [School] = []
     @Published var sortOrder: SortOrder = .ascending

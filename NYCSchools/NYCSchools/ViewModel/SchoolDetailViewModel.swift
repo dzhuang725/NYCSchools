@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 final class SchoolDetailViewModel: ObservableObject {
     let school: School
     @Published var satScore: SATScore?
